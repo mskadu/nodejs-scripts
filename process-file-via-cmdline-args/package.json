@@ -1,0 +1,12 @@
+{
+  "name": "process-file-via-cmdline-args",
+  "version": "1.0.0",
+  "description": "An example Javascript to process a file received via command line",
+  "main": "process-file.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
