@@ -1,0 +1,16 @@
+# commands to generate private kays + self-signed certificates for the test
+
+# 1. Use OpenSSL generate a 2048-bit RSA private key
+openssl genrsa -out tls/localhost/localhost-privatekey.pem 2048
+
+# 2. Create a Certificate Signing Request (CSR) file for your private key
+openssl req -new -sha256 -key tls/localhost/localhost-privatekey.pem -out tls/localhost/localhost-csr.pem
+
+#3.  Create a self-signed certificate using the OpenSSL. Note: Skip if you have a CA who can do this for you
+openssl x509 -req -in tls/localhost/localhost-csr.pem -signkey tls/localhost/localhost-privatekey.pem -out tls/localhost/localhost-public_cert.pem
+
+# Summary - you should end up with the following 3 files (placed, for this test, under ./tls/localhost)
+
+localhost-privatekey.pem	# your private key
+localhost-csr.pem			# the CSR generated for your private key
+localhost-public_cert.pem	# the self-signed public certificate 
