@@ -23,12 +23,12 @@ var https = require('https')
 
 var config 				= 	require('./config.js');
 // General stuff
-let	configReqLimit		= config.reqLimit 		||	'1024';	
+let configPort			= config.port			||	'8671';	
+>>>>>>> 35d66813e2e0cfe1aa09daec59dc291e299f3c09
 // Config TLS certs
 let tlsKeyFilename		= config.tls.keyFile 	|| './tls/defaultKey.pem';
 let tlsCertFilename		= config.tls.certFile 	|| './tls/defaultCert.pem';
 let tlsCAFilename		= config.tls.caFile		|| './tls/defaultCA.pem';
-
 // TLS setup
 var https_options = {
     key: fs.readFileSync(tlsKeyFilename),	// private key
@@ -59,4 +59,9 @@ app.use(function (err, req, res, next) {
 https.createServer(https_options, app)
 	 .listen(configPort, () => {
 	console.log("Listening on port %s - ready!", configPort);
+<<<<<<< HEAD
 });
+=======
+});
+
+>>>>>>> 35d66813e2e0cfe1aa09daec59dc291e299f3c09
