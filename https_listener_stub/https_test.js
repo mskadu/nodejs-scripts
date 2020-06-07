@@ -22,7 +22,6 @@ var fs = require('fs')
 var https = require('https')
 
 var config 				= 	require('./config.js');
-// General stuff
 let	configPort			= config.port			||	'8671';
 // Config TLS certs
 let tlsKeyFilename		= config.tls.keyFile 	|| './tls/defaultKey.pem';
@@ -58,9 +57,4 @@ app.use(function (err, req, res, next) {
 https.createServer(https_options, app)
 	 .listen(configPort, () => {
 	console.log("Listening on port %s - ready!", configPort);
-<<<<<<< HEAD
 });
-=======
-});
-
->>>>>>> 35d6681... adding in https_test_stub
