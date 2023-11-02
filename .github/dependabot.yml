@@ -5,8 +5,14 @@
 
 version: 2
 updates:
-  - package-ecosystem: "" # See documentation for possible values
-    directory: "/" # Location of package manifests
+    # NPM 1
+  - package-ecosystem: "npm" # 
+    directory: "/https_listener_stub/" # Location of package manifests
     schedule:
       interval: "weekly"
 
+    # NPM 2
+  - package-ecosystem: "npm" 
+    directory: "/process-file-via-cmdline-args/" # Location of package manifests
+    schedule:
+      interval: "weekly"
