@@ -9,7 +9,7 @@
   "author": "Mayuresh Kadu",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.19.2",
+    "express": "^4.20.0",
     "fs": "0.0.1-security",
     "https": "^1.0.0"
   }
